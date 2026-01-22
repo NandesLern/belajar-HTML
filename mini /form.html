@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.908);
+            font-family: Arial;
+            overflow: hidden;
+        }
+
+        .container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 16px;
+            box-shadow: 0 15px 30px rgba(0,0,0,.3);
+            width: 380px;
+            animation: floatIn .8s ease;
+        }
+
+        @keyframes floatIn {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 22px;
+        }
+
+        a {
+            text-decoration: none;
+            width: 100%;
+            padding: 11px;
+            border: none;
+            background: linear-gradient(135deg, #00bcd4, #0097a7);
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: .3s;
+        }
+
+        .group {
+            margin-bottom: 14px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 9px 11px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: .25s;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: #00bcd4;
+            box-shadow: 0 0 0 3px rgba(0,188,212,.25);
+            transform: scale(1.02);
+        }
+
+        .inline {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+        }
+
+        button {
+            width: 100%;
+            padding: 11px;
+            border: none;
+            background: linear-gradient(135deg, #00bcd4, #0097a7);
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: .3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0,0,0,.25);
+        }
+
+        button:active {
+            transform: scale(.96);
+        }
+
+        .social {
+            margin-top: 18px;
+            text-align: center;
+        }
+
+        .social i {
+            font-size: 22px;
+            margin: 0 8px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .social i:hover {
+            transform: scale(1.3);
+            color: #00bcd4;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Form Data</h2>
+
+    <form>
+        <div class="group">
+            <label>Username</label>
+            <input type="text">
+        </div>
+
+        <div class="group">
+            <label>Password</label>
+            <input type="password">
+        </div>
+
+        <button type="submit"><a href="home.html">Submit</a></button>
+        <div class="social">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
